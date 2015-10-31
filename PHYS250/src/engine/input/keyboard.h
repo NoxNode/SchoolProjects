@@ -19,6 +19,9 @@ extern void Keyboard_handleEvent(Keyboard* keyboard, SDL_Event* event);
 extern void Keyboard_update(Keyboard* keyboard);
 // Note: keycodes means SDL's keycodes found here: https://wiki.libsdl.org/SDL_Keycode
 extern Button* Keyboard_getKey(Keyboard* keyboard, int keycode);
+extern bool Keyboard_isKeyPressed(Keyboard* keyboard, int keycode);
+extern bool Keyboard_isKeyHeld(Keyboard* keyboard, int keycode);
+extern bool Keyboard_isKeyReleased(Keyboard* keyboard, int keycode);
 // Note: keycodes means SDL's keycodes found here: https://wiki.libsdl.org/SDL_Keycode
 extern void Keyboard_addKey(Keyboard* keyboard, int keycode);
 

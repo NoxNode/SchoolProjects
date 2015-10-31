@@ -14,16 +14,16 @@ float speed = 500;
 
 void testUpdate(GameComponent* gameComponent, float deltaTime) {
 	Keyboard* keyboard = gameComponent->parent->scene->game->coreEngine->input->keyboard;
-	if(Button_isHeld(Keyboard_getKey(keyboard, SDLK_w))) {
+	if(Keyboard_isKeyHeld(keyboard, SDLK_w)) {
 		y -= deltaTime * speed;
 	}
-	if(Button_isHeld(Keyboard_getKey(keyboard, SDLK_a))) {
+	if(Keyboard_isKeyHeld(keyboard, SDLK_a)) {
 		x -= deltaTime * speed;
 	}
-	if(Button_isHeld(Keyboard_getKey(keyboard, SDLK_s))) {
+	if(Keyboard_isKeyHeld(keyboard, SDLK_s)) {
 		y += deltaTime * speed;
 	}
-	if(Button_isHeld(Keyboard_getKey(keyboard, SDLK_d))) {
+	if(Keyboard_isKeyHeld(keyboard, SDLK_d)) {
 		x += deltaTime * speed;
 	}
 

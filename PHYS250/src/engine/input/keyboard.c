@@ -57,6 +57,18 @@ Button* Keyboard_getKey(Keyboard* keyboard, int keycode) {
     return 0;
 }
 
+bool Keyboard_isKeyPressed(Keyboard* keyboard, int keycode) {
+    return Button_isPressed(Keyboard_getKey(keyboard, keycode));
+}
+
+bool Keyboard_isKeyHeld(Keyboard* keyboard, int keycode) {
+    return Button_isHeld(Keyboard_getKey(keyboard, keycode));
+}
+
+bool Keyboard_isKeyReleased(Keyboard* keyboard, int keycode) {
+    return Button_isReleased(Keyboard_getKey(keyboard, keycode));
+}
+
 void Keyboard_addKey(Keyboard* keyboard, int keycode) {
     if(keyboard->curKeyIndex >= keyboard->nKeys) {
         // handle error better
